@@ -105,7 +105,7 @@ This helps understand which states are more affected and which factors contribut
 
 🚀 How to Run the Project
 1. Clone the repository
-git clone https://github.com/your-username/your-repo-name.git
+git clone (https://github.com/AditiiSingh03/Composite-Poverty-Index)
 
 2. Install dependencies
 pip install pandas numpy scikit-learn matplotlib
@@ -142,4 +142,5 @@ State-wise poverty comparison
 📬 Author
 
 Aditi Singh
+
 B.Tech CSIT | Data Science Enthusiast
