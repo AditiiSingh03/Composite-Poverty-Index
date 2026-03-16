@@ -123,3 +123,43 @@ Plotly
 ## How to Run the Project
 
 Clone the repository
+git clone https://github.com/AditiiSingh03/Composite-Poverty-Index.git
+Install dependencies
+pip install -r requirements.txt
+Run the dashboard
+streamlit run app.py
+
+---
+
+## Project Structure
+
+
+Composite-Poverty-Index
+│
+├── app.py
+├── requirements.txt
+├── adaboost_model.pkl
+├── final_master_dataset_10_attributes.csv
+├── feature_importance_summary.csv
+├── india_states.geojson
+├── red_flag_states.csv
+└── README.md
+
+---
+
+## Future Improvements
+
+Possible extensions include:
+
+- District-level poverty prediction
+- Real-time government dataset integration
+- Causal policy impact analysis
+- Advanced explainable AI techniques
+
+---
+
+## Author
+
+Aditi Singh  
+B.Tech Computer Science Student  
+KIET Group of Institutions
