@@ -1,147 +1,125 @@
-Poverty Analysis & Composite Poverty Index (CPI) – Data Science Project
+# Multidimensional Poverty Prediction & Policy Simulation Dashboard
 
-This project focuses on analyzing poverty-related indicators across different states and building a Composite Poverty Index (CPI) using data preprocessing, normalization, correlation-based weighting, and visualization.
+This project builds a data-driven system to analyze multidimensional poverty across Indian states using socio-economic indicators.  
+The system predicts SDG poverty scores, detects anomalies, and provides policy simulation tools for decision-makers.
 
-The goal is to create a data-driven, quantifiable measure of poverty by combining multiple socioeconomic parameters into a single index.
+The dashboard allows interactive exploration of poverty indicators and enables users to simulate policy interventions.
 
-⭐ Project Overview
+---
 
-Poverty is influenced by several factors such as:
+## Project Overview
 
-Literacy Rate
+Poverty is a multidimensional issue influenced by education, health, financial inclusion, sanitation, and employment.
 
-Unemployment Rate
+This project builds a machine learning system that:
 
-Per Capita Income
+• Predicts poverty-related SDG scores for Indian states  
+• Detects anomalies between actual and predicted outcomes  
+• Classifies states into poverty risk categories  
+• Provides policy simulation tools to test potential improvements  
+• Visualizes poverty risk geographically across India
 
-Population Below Poverty Line (BPL)
+---
 
-Access to Basic Facilities
+## Dataset
 
-This project:
+The dataset contains socio-economic indicators for Indian states.
 
-Cleans the dataset
+Features used in the model include:
 
-Handles missing values
+- Literacy Rate
+- Average Monthly Per Capita Consumption Expenditure (MPCE)
+- Unemployment Rate
+- Infant Mortality Rate (IMR)
+- Secondary School Dropout Rate
+- Sanitation Access
+- Nutrition Stunting
+- Bank Account Access
 
-Normalizes all numeric indicators
+Target variable:
 
-Calculates weights using correlation-based feature importance
+SDG Poverty Target Score
 
-Computes Composite Poverty Index (CPI)
+---
 
-Visualizes state-wise CPI using Matplotlib
+## Machine Learning Model
 
-📂 Repository Structure
-├── poverty_dataset.csv                     # Raw dataset
-├── poverty_dataset_clean.csv               # Cleaned dataset
-├── poverty_dataset_normalized.csv          # Normalized dataset
-├── poverty_dataset_with_cpi.csv            # Dataset with computed CPI
-├── Untitled.ipynb                          # Notebook with full analysis
-└── README.md                               # Project documentation
+The model used in this project is:
 
-🔧 Technologies Used
+AdaBoost Regressor
 
-Python
+The model predicts poverty scores based on socio-economic indicators and evaluates prediction errors to identify anomalies.
 
-Pandas
+---
 
-NumPy
+## Dashboard Features
 
-Scikit-learn
+The interactive Streamlit dashboard provides the following capabilities:
 
-Matplotlib
+### State-Level Analysis
 
-Jupyter Notebook
+Users can select any Indian state to view:
 
-📊 Steps Performed in This Project
-1️⃣ Data Loading
+- Actual poverty score
+- Predicted poverty score
+- Risk classification
+- Anomaly detection
 
-Import dataset using pandas
+---
 
-Display initial rows and structure
+### Policy Simulation Engine
 
-2️⃣ Data Cleaning
+Users can simulate policy improvements by adjusting:
 
-Remove commas from Per Capita Income
+- Literacy Rate
+- Sanitation Access
+- Bank Account Access
 
-Convert numeric columns to proper data types
+The system recalculates the predicted poverty score based on the new values.
 
-Handle missing values using median imputation
+---
 
-3️⃣ Normalization
+### Feature Importance Analysis
 
-Normalized all numerical indicators using Min-Max Scaling to bring values between 0 and 1.
+The dashboard shows which indicators most influence poverty outcomes.
 
-from sklearn.preprocessing import MinMaxScaler
+Example insights:
 
-4️⃣ Feature Weight Calculation
+Financial inclusion (Bank Account Access)  
+Health indicators (Infant Mortality Rate)  
+Consumption expenditure levels
 
-Weights are generated using the sum of correlations of each feature with all others.
+---
 
-Higher weight = greater impact on poverty level.
+### Poverty Risk Map
 
-5️⃣ Composite Poverty Index (CPI)
+The dashboard includes a choropleth map of India showing:
 
-CPI formula:
+- High Risk States
+- Medium Risk States
+- Low Risk States
 
-CPI = Σ (Normalized Feature × Weight)
+This enables quick geographical understanding of poverty risk distribution.
 
+---
 
-A higher CPI indicates worse poverty conditions.
+### Anomaly Detection
 
-6️⃣ Visualization
+States with large gaps between predicted and actual scores are flagged for further policy investigation.
 
-Created a State-wise CPI Bar Chart using Matplotlib.
+---
 
-📈 Results
+## Technologies Used
 
-✔ Cleaned & normalized dataset
-✔ Automatically computed weightage for each factor
-✔ Final CPI values for each state
-✔ Visualization of poverty distribution
+Python  
+Streamlit  
+Scikit-learn  
+Pandas  
+Matplotlib  
+Plotly  
 
-This helps understand which states are more affected and which factors contribute most to poverty.
+---
 
-🚀 How to Run the Project
-1. Clone the repository
-git clone https://github.com/AditiiSingh03/Composite-Poverty-Index
+## How to Run the Project
 
-2. Install dependencies
-pip install pandas numpy scikit-learn matplotlib
-
-3. Open the notebook
-jupyter notebook
-
-4. Run all cells
-
-The notebook will:
-
-Clean the data
-
-Normalize features
-
-Compute weights
-
-Generate CPI
-
-Plot the graph
-
-🎯 Use Cases
-
-Policy making
-
-Social welfare planning
-
-Academic research
-
-Data-driven poverty forecasting
-
-State-wise poverty comparison
-
-📬 Author
-
-Aditi Singh
-
-B.Tech CSIT | Data Science Enthusiast
-
+Clone the repository
